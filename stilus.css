@@ -9,13 +9,15 @@ main,header,nav,article {
     padding: 10px;
     display: grid;
     grid-gap: 3px;
+    background-color: #a62132;
 }
 body {
     width: 90%;
     max-width: 800px;
     margin: auto;
     padding: 10px;
-    background-color: black;
+    background-color: #145c4e;
+    color: white;
 }
 header h1 {
     color: black;
