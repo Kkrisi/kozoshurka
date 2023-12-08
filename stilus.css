@@ -4,12 +4,15 @@
     box-sizing: border-box; 
     font-family: "Times New Roman", Times, serif;
 }
-main,header,nav,article {
-    border: 1px solid gray;
+main,header,nav,article,footer {
+    border: 2px solid white;
     padding: 10px;
-    display: grid;
-    grid-gap: 3px;
     background-color: #a62132;
+    grid-gap: 10px;
+}
+main {
+    display: grid;
+    grid-template-areas: "h h" "a n" "f f";
 }
 body {
     width: 90%;
@@ -19,37 +22,33 @@ body {
     background-color: #145c4e;
     color: white;
 }
+header {
+    grid-area: h;
+}
 header h1 {
-    color: black;
-    font-size: 20px;
+    font-size: 200%;
     padding: 10px 0px 10px;
+    text-align: center;
 }
 img {
     width: 100%;
 }
 nav {
-    background-color: #d3d3d3;
-    padding: 5px 0px 3px 1px;
+    grid-area: n;
+    background-color: black;
 }
 nav ul {
     list-style-type: none;
     display: grid;
-    grid-template-columns: 10fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
-nav li {
-    text-align: ;
+nav ul li {
+    margin-bottom: 20px;
 }
 nav a{
-    padding: 5px;
-    color: #cf0033;
     text-decoration: none;
-    font-size: 11px;
-    border-left: 1px solid black;
-    vertical-align: top;
-}
-nav .kezdolapa {
-    background-color: #cf0033;
     color: white;
+    border-bottom: 1px solid white;
 }
 
 
@@ -57,6 +56,9 @@ nav .kezdolapa {
 
 
 
+article {
+    grid-area: a;
+}
 
 article h2 {
     color: black;
@@ -76,7 +78,9 @@ article .keret div {
 }
 
 
-
+footer {
+    grid-area: f;
+}
 
 
 
@@ -97,8 +101,7 @@ article .keret div {
       padding: 2px;
     }
     main {
-        grid-template-columns: 1fr;
-        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas: "h" "n" "a" "f";
     }
     header h1 {
         padding: 3px 0px 3px 0px;
